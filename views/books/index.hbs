@@ -1,0 +1,27 @@
+<h1>Daftar Buku Lengkap</h1>
+<div class="row">
+    {{#each books}}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+
+                </div>
+                <div class="card-content center-align">
+                    <h5>{{nama_buku}}</h5>
+                    <p>{{section_buku}}</p>
+                    <p>{{status_buku}}</p>
+                    <br>
+                    <div class="chip">
+                        <img src="{{user.image}}" alt="">
+                        <a href="/books/user/{{user._id}}">{{user.displayName}} </a>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a href="/books/{{_id}}" class="btn grey">Keterangan</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <p>Buku tidak tersedia</p>
+    {{/each}}    
+</div>

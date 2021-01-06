@@ -1,0 +1,38 @@
+<h6>Menu Buku Saya</h6>
+<h3>Selamat Datang, {{name}}</h3>
+<p>Berikut adalah buku yang Anda kelola</p>
+
+{{#if books}}
+<table class = "stripped">
+    <head>
+        <thead>
+            <tr>
+                <th>nama_buku</th>
+                <th>status_buku</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each books}}
+                <tr>
+                    <td><a href="/books/{{_id}}">{{nama_buku}}</a></td>
+                    <td><span class="dash-status">{{status_buku}}</span></td>
+                    <td>
+                        <a href="/books/edit/{{_id}}" class="btn btn-float">
+                            <i class="fas fa-edit"></i>                        
+                        </a>
+                        <form action="/books/{{_id}}" method="POST" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn red">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </head>
+</table>
+{{else}}
+    <p>Tidak ada pinjaman buku!</p>
+{{/if}}

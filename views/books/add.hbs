@@ -1,0 +1,46 @@
+<h3>Tambah Data Buku</h3>
+<div class="row">
+    <form action="/books" method="POST" class="col s12">
+    <div class="row">
+        <div class="input-field">
+            <input type="text" id="nama_buku" name="nama_buku">
+            <label for="nama_buku">Nama Buku</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field">
+            <input type="text" id="author_buku" name="author_buku">
+            <label for="author_buku">Author Buku</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field">
+            <select name="section_buku" id="section_buku">
+                <option value="Umum" selected>Umum</option>
+                <option value="Filsafat dan Psikologi">Filsafat dan Psikologi</option>
+                <option value="Agama">Agama</option>
+                <option value="Sosial">Sosial</option>
+                <option value="Bahasa">Bahasa</option>
+                <option value="Sains dan Matematika">Sains dan Matematika</option>
+                <option value="Teknologi">Teknologi</option>
+                <option value="Seni dan Rekreasi">Seni dan Rekreasi</option>
+                <option value="Literatur dan Sastra">Literatur dan Sastra</option>
+                <option value="Sejarah dan Geografi">Sejarah dan Geografi</option>
+            </select>  
+            <label for="section_buku">Section Buku</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field">
+            <select name="status_buku" id="status_buku">
+                <option value="Tersedia" selected>Tersedia</option>
+                <option value="Dipinjam">Dipinjam</option>
+            </select>  
+            <label for="status_buku">Status Buku</label>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" value="Simpan" class="btn">
+        <a href="/dashboard" class="btn red">Batal</a>
+    </div>
+</div>
